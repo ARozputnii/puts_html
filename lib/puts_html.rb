@@ -3,7 +3,7 @@ require "puts_html/version"
 class Putshtml
 
 
-  def self.add_to_file (content, bypass_html)
+  def add_to_file (content, bypass_html)
 
     string = ''
     if bypass_html == false
@@ -22,3 +22,5 @@ class Putshtml
 		</html>" }
   end
 end
+
+

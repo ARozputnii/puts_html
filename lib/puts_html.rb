@@ -1,6 +1,5 @@
 require "puts_html/version"
 
-
   class Error < StandardError; end
 	class PutsHtml
 	  def initialize

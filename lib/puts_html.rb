@@ -14,5 +14,5 @@ module PutsHtml
 	    File.open('text.html', 'w'){ |f| f.write "#{$string}  <br>#{$string2} <br>#{$string3}"  }
 	  end
 	end
-	$f = PutsHtml::PutsHtml.new
+	$f = PutsHtml.new
 end

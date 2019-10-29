@@ -1,7 +1,7 @@
 require "puts_html/version"
 
 class PutsHtml
-  def add_to_file (content, bypass_html)
+  def self.add_to_file (content, bypass_html)
     string = ''
     if bypass_html == false
         string = content.gsub!(/[<>]/,"")

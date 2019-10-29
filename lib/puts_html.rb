@@ -1,10 +1,9 @@
 require "puts_html/version"
 
-module PutsHtml
+module Putshtml
 
-	extend self
-	
-  def add_to_file (content, bypass_html)
+
+  def self.add_to_file (content, bypass_html)
 
     string = ''
     if bypass_html == false

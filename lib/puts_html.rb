@@ -1,28 +1,28 @@
 require "puts_html/version"
 
-module Putshtml
-  class << self
 
-	  def add_to_file (content, bypass_html)
+class Putshtml
 
-	    string = ''
-	    if bypass_html == false
-	        string = content.gsub!(/[<>]/,"")
+  def add_to_file(content, bypass_html='false' )
+        
+  	  if bypass_html == true
+	      string = content.gsub!(/[<>]/,"")
 	    end
-			File.open('index.html', 'w'){ |f| f.write 
-			"<!DOCTYPE html>\n 
-			<html lang='en'>
-				<head>\n
-					<meta charset='utf-8'>\n
-					<title> Web </title>\n
-				</head>\n
-				<body>\n
-					#{string}\n
-				</body>\n
-			</html>" }
-		end
+
+      f = File.new("index.html", 'w+')
+      f.puts "<!DOCTYPE html>"
+      f.puts "<html lang='en'>"
+      f.puts "  <head>"
+      f.puts "    <meta charset='utf-8'>"
+      f.puts "    <title>Status inf</title>"
+      f.puts "  </head>"
+      f.puts "  <body>"
+      f.puts "      <p>#{content}</p>"
+      f.puts "  </body>"
+      f.puts "</html>"
+      f.close
 
   end
-end
 
+end
 

@@ -1,10 +1,21 @@
 require "puts_html/version"
 
 class PutsHtml
-	def p_file
-		if $string.include?("<") or $string.include?(">")
-			$string.gsub!(/[<>]/,"")
-		end
-			File.open('text.html', 'w'){ |f| f.write "#{$string}  <br>#{$string2} <br>#{$string3}"  }
-	end
+  def self.add_to_file (content, bypass_html)
+    save = ''
+    if bypass_html == false
+        string = content.gsub!(/[<>]/,"")
+    end
+File.open('index.html', 'w'){ |f| f.write 
+	"<!DOCTYPE html>\n 
+	<html lang='en'>
+		<head>\n
+			<meta charset='utf-8'>\n
+			<title> Web </title>\n
+		</head>\n
+		<body>\n
+			#{string}\n
+		</body>\n
+	</html>" }
+  end
 end

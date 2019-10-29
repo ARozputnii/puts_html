@@ -7,7 +7,7 @@ require "puts_html/version"
 	    $string2
 	    $string3
 	  end
-	  def self.p_file
+	  def p_file
 	    if $string.include?("<") or $string.include?(">")
 	        $string.gsub!(/[<>]/,"")
 	    end

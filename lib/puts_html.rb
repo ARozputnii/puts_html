@@ -17,7 +17,7 @@ class Putshtml
       f.puts "    <title>Status inf</title>"
       f.puts "  </head>"
       f.puts "  <body>"
-      f.puts "      <p>#{content}</p>"
+      f.puts "      <p>#{string}</p>"
       f.puts "  </body>"
       f.puts "</html>"
       f.close

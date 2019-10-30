@@ -21,4 +21,4 @@ require "puts_html/version"
         f.puts "</html>"
         f.close
     end
-
+  end
